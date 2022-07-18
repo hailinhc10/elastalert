@@ -1,0 +1,11 @@
+[Unit]
+Description=Elastalert
+After=elasticsearch.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/elastalert
+ExecStart=/root/.pyenv/shims/elastalert --verbose --config /home/elastalert/config.yaml
+
+[Install]
+WantedBy=multi-user.target
