@@ -1,6 +1,6 @@
 # python 3.9.5
 pyenv Python 3.9.5
-#install
+# install
 yum install python3-pip -y
 pip3 -V
 sudo yum install zlib-devel bzip3 bzip3-devel libffi-devel openssl-devel readline-devel sqlite sqlite-devel xz xz-devel
