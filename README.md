@@ -26,7 +26,11 @@ python -m elastalert.elastalert --verbose --rule a.yaml
 vi /lib/systemd/system/elastalert.service
 # enable services
 ln -s /lib/systemd/system/elastalert.service /etc/systemd/system/elastalert.service
+# reload service
 systemctl daemon-reload
+# enable services
 systemctl enable elastalert.service
+# start services
 systemctl start elastalert.service
+# status services
 systemctl status elastalert.service
