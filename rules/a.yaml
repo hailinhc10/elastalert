@@ -1,1 +1,29 @@
+es_host: 10.1.20.9
 
+es_port: 9200
+
+es_username: "elastic"
+es_password: "EJXBX6X9c4BwKbfhtuK2"
+
+name: TEST
+
+type: any
+
+index: elastic*
+
+filter:
+- query:
+    
+    query_string:
+        query: "level: error"
+alert:
+- "telegram"
+
+alert_text: "TEST-ENV - {0} \n {1} \n {2} "
+alert_text_args: [ "level" , "message" , "tags" ]
+alert_text_type: alert_text_only
+alert_subject_args:
+  - "message"
+
+telegram_bot_token: 5569797730:AAGDGRqqIyDIP9vytcHUjW5LU1nGdtCtMZ4
+telegram_room_id: "-1001598534617"
